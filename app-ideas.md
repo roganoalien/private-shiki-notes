@@ -28,6 +28,8 @@ Need to build multiple apps to have an extra income and some open source project
 
 6. HR platform where users can register to have their CV made automaticaly from their data, take some specialized tests and even be previously evaluated with video footage of those evaluations and for enterprises to use it so candidates can apply to them via our platform validating all types of features like languages, knowledge and companies can pay to access candidates already in the platform and have a specialized type of interview with what they specifically are looking for with a paid membership.
 
+7. A kind of sandbox app that uses Apple containers or something similar to open urls and review it for any type of scame, phising, malware or something and still be able to open it and navegate through it with a safe environment. But it should probably be a multiple browsers type of app like openin.
+
 - 
 
 ## Next Steps
