@@ -5,6 +5,8 @@ tags: []
 notebook: private-shiki-notes
 links: []
 template: null
+language: python
+learning: 'true'
 ---
 
 # Learning python
