@@ -216,3 +216,16 @@ while comando != "salir":
     comando = input("$ ")
     print(comando)
 ```
+
+#### Funciones
+
+```python
+def hola():
+    print("Hola mundo!")
+
+def name(nombre):
+    print(f"Hola {nombre}")
+
+
+name() 
+```
