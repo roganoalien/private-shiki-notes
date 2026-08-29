@@ -223,9 +223,17 @@ while comando != "salir":
 def hola():
     print("Hola mundo!")
 
-def name(nombre):
-    print(f"Hola {nombre}")
+
+def name(nombre, apellido):
+    print(f"Hola {nombre} {apellido}")
 
 
-name() 
+def fecha(mes, dia=False): # parametro opcional
+    if mes:
+        print("Agosto")
+    elif dia:
+        print("29")
+
+
+name(apellido="Garcia", nombre="Rodrigo") 
 ```
