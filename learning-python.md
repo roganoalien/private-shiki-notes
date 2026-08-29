@@ -102,3 +102,10 @@ print(math.sqrt(9)) # la raiz cuadrada
 ```
 
 Para buscar todos los metodos de `math` esta en la pagina de documentacion oficial de python https://docs.python.org/3/library/math.html
+
+#### Input de datos
+Para obtener datos del usuario desde la terminal y guardarlo en una variable
+
+```python
+n1 = input("ingresa primer numero")
+```
