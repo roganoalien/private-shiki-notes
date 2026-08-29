@@ -61,3 +61,44 @@ print("gato" not in animal) # hace lo similar al in pero negando
 
 #### Secuencias de escape
 Basicamente poner caracteres especiales en un string como poner dobles comillas en un string `"Ultimate \"Python\""` o tambien `'Ultimate "Pyton"'`. Eso aplica como en cualquier otro lenguaje con `\n \\ \" \'`, etc.
+
+#### Numeros
+Se tienen dos tipos de numeros en python
+
+```python
+entero = 1 # int
+decimal = 1.5 # float
+imaginario = 2 + 2j # 2 + 2i // i es la raiz cuadrada de -1
+
+print(1 / 3) # 0.3333
+print(1 // 3) # 0 - no devuelve los decimales
+print(8 % 3) # de la division devuelve el resto
+print(2 ** 3) # para poner potencias
+entero += 2 # se puede usar este metodo con multiplicacion, resta, division
+entero -= 2
+entero *= 2
+entero /= 2
+```
+
+#### Modulo Math
+Parecido al Math de JavaScript pero no se necesita usar la palabra reservada `Math`.
+
+```python
+print(round(1.3)) # redondear al numero mas cercano
+print(abs(-77)) # 77 ... nos devuelve el valor absoluto, siempre devuelve un numero positivo
+```
+
+##### Math.py
+Es el modulo nativo de Python parecido al de Javascript, los anteriores son las funciones por default sin el modulo. Tiene muchos metodos pero estos son los mas utilizados o "importantes".
+
+```python
+import math
+
+print(math.ceil(1.1)) # nos lleva al numero entero hacia arriba
+print(math.floor(1.9999)) # nos lleva al numero entero hacia abajo
+print(math.isnan(23)) # para validar si es o no un numero, devuelve un boolean
+print(math.pow(10, 3)) # nos ayuda a elevar un numero a la potencia de algo, el primer argumento es el numero y el segundo la potencia
+print(math.sqrt(9)) # la raiz cuadrada
+```
+
+Para buscar todos los metodos de `math` esta en la pagina de documentacion oficial de python https://docs.python.org/3/library/math.html
