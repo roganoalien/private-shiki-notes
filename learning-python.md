@@ -107,5 +107,5 @@ Para buscar todos los metodos de `math` esta en la pagina de documentacion ofici
 Para obtener datos del usuario desde la terminal y guardarlo en una variable
 
 ```python
-n1 = input("ingresa primer numero")
+n1 = input("ingresa primer numero") # nos devuelve un string y habria que transformar a un numero
 ```
