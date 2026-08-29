@@ -109,3 +109,12 @@ Para obtener datos del usuario desde la terminal y guardarlo en una variable
 ```python
 n1 = input("ingresa primer numero") # nos devuelve un string y habria que transformar a un numero
 ```
+
+#### Conversion de tipos
+
+```python
+# int() - transforma en un numero entero
+# str() - transforma en un string
+# float() - transforma en un numero decimal
+# bool() - transforma en un booleano // falsy nos da con un "", 0 o None
+```
