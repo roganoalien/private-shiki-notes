@@ -28,4 +28,4 @@ Los servicios de cara a cliente, todos los modulos que terminan hacia un cliente
 
 Ya se ha reportado muchas veces que hacen cambios sin avisar y hay afectaciones. Se debería de hacer un proceso en el que mínimo hagan cambios con un RFC y se haga listas de quiénes han sido afectado y empiecen por UN AMBIENTE. 
 
-PRESIONAR PARA SABER QUÉ PASÓ Y QUIÉN FUE sobre el error anterior del 5 de agosto. CIBERSEGURIDAD iba a investigar de quién es esa cuenta. Manejarlo como que no fue exactamente ellos o si fue devops o infra o quien.
+qPRESIONAR PARA SABER QUÉ PASÓ Y QUIÉN FUE sobre el error anterior del 5 de agosto. CIBERSEGURIDAD iba a investigar de quién es esa cuenta. Manejarlo como que no fue exactamente ellos o si fue devops o infra o quien.
