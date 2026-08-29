@@ -120,3 +120,99 @@ n1 = input("ingresa primer numero") # nos devuelve un string y habria que transf
 # float() - transforma en un numero decimal
 # bool() - transforma en un booleano // falsy nos da con un "", 0 o None
 ```
+
+#### Comparadores logicos
+Basicamente aplican todos en cualquier lenguaje de programacion `> < = != == >= <=`.
+
+#### Condicionales
+
+```python
+edad = 22
+if edad > 54:
+    print("Puedes ver la pelicula con descuento")
+elif edad > 17:
+    print("Puedes ver la pelicula")
+else:
+    print("No puedes entrar")
+
+print("Listo!")
+```
+
+#### Operador ternario
+Como en JavaScript y otros lenguajes
+
+```python
+edad = 15
+
+mensaje = "Es mayor de edad" if edad > 17 else "Es menor de edad"
+
+print(mensaje)
+```
+
+#### Operadores logicos
+And `and`, Or `or` and not `not`
+
+```python
+gas = True
+encendido = True
+
+if gas and encendido:
+    print("La estufa esta prendida")
+
+if gas or encendido:
+    print("Puedes intentar prender la estufa o la estufa ya esta prendida")
+
+if gas and not encedido:
+    print("Puedes encender la estufa")
+```
+
+#### Operaciones de corto circuito
+Basicamente lo que significa esto es que si tienes un if con un and y la primer variable es falsa, lo demas no se evalua y el or es que uno tiene que ser verdadero. 
+#### Cadena de operadores
+
+```python
+edad = 25
+
+# if edad >= 15 and edad <= 65 # basicamente es tomar esto y convertirlo en... (siguiente linea)
+if 15 <= edad <= 65:
+    print("puedes entrar")
+```
+
+#### For
+Basicamente es lo mismo que javascript pero se escribe como un foreach de javascript
+
+```python
+for numero in range(5):
+    print(numero)
+```
+
+##### For else
+Sirve para salir del ciclo, para evitar seguir con el mismo usando `break`. El `else` es en caso de que el For o la busqueda de algo en el ciclo fracase.
+
+```python
+buscar = 3
+
+for numero in range(5):
+    print(numero)
+    if numero == buscar:
+        print("encontrado", buscar)
+        break
+else: 
+    print("No encontre el numero que buscas")
+```
+
+#### While
+
+```python
+numero = 1
+
+while numero < 100:
+    print(numero)
+    numero *= 2
+----
+comando = ""
+
+while comando != "salir":
+    comando = input("$ ")
+    print(comando)
+```
