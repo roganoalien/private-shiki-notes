@@ -237,3 +237,19 @@ def fecha(mes, dia=False): # parametro opcional
 
 name(apellido="Garcia", nombre="Rodrigo") 
 ```
+
+##### XARGS
+Cuando necesitas pasar múltiples argumentos a una función, se vuelve el argumento iterable como si recibiese un arreglo.
+
+```python
+def suma(*numeros):
+    resultado = 0
+    for numero in numeros:
+        resultado += numero
+    print(resultado)
+
+
+suma(2, 5, 7)
+suma(2, 5)
+suma(3, 8, 54, 89)
+```
