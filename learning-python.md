@@ -279,3 +279,11 @@ Estos son los tipos de python:
 - string
 - boolean
 - list (arreglos) [] tambien se pueden crear con la función `list()` dentro se debe de poner un rango o algo que se pueda iterar y crea esa lista. Por ejemplo: `list(range(0,10))` crea un arreglo con números del 0 al 9, siendo 10 elementos en total. `list("hola mundo")` crea un arreglo con cada caracter, incluido el espacio, del string.
+
+##### "Desempaquetar" listas
+Una forma rápida de ingresar el valor de cada indice de un arreglo a una variable se puede hacer de la siguiente forma:
+```python
+numeros = [1, 2, 3]
+primero, segundo, tercero = numeros
+print(primero, segundo, tercero) # nos dará como resultado 1 2 3
+```
