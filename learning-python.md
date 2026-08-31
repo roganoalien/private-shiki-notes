@@ -286,4 +286,23 @@ Una forma rápida de ingresar el valor de cada indice de un arreglo a una variab
 numeros = [1, 2, 3]
 primero, segundo, tercero = numeros
 print(primero, segundo, tercero) # nos dará como resultado 1 2 3
+
+# para acceder al primer elemento de forma "python" se haría así:
+primero, *otros = numeros
+print(primero) # nos devuelve 1, usa la misma lógica del uso del * en una función para asignarle infinita cantidad de argumentos sin tener que definirlos. Se puede utilizar esto de *otros, de varias formas para obtener diferentes cosas como agregando después de *otros otro nombre de variable y almacenaría el último 
+```
+
+##### Iterar listas (arreglos)
+```python
+mascotas = ["Renato", "Chulita", "Lilo"]
+for mascota in mascotas
+    print(mascota) # Renato, Chulita, Lilo
+```
+
+Para acceder al indice del elemento se debe de hacer de la siguiente forma:
+```python
+for mascota in enumerate(mascotas):
+    print(mascota) # (0, Renato) \n (1, Chulita) \n (2, Lilo) # esto se llama duplas que sería como un tipo de objeto
+    print(mascota[0]) # nos devolvería el indice
+    print(mascota[1]) # nos devolvería el nombre, por eso la dupla sale como (index, valor) ## (0, Renato)
 ```
