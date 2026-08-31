@@ -242,7 +242,7 @@ name(apellido="Garcia", nombre="Rodrigo")
 Cuando necesitas pasar múltiples argumentos a una función, se vuelve el argumento iterable como si recibiese un arreglo.
 
 ```python
-def suma(*numeros):
+def suma(**numeros):
     resultado = 0
     for numero in numeros:
         resultado += numero
@@ -253,3 +253,29 @@ suma(2, 5, 7)
 suma(2, 5)
 suma(3, 8, 54, 89)
 ```
+
+#### Return
+Funciona exactamente igual que JavaScript y Go. Solo tengo que revisar si puede devolver un objeto o múltiples valores.
+
+#### Variables globales
+Se definen igual que en otros lenguajes como una variable normal pero si quieres acceder a ella dentro de una función o algo necesitas escribir la palabra reservada `global`
+
+```python
+saludo = "Hola Mundo"
+
+def saludar():
+    global saludo
+    saludo "Hola Global"
+
+
+saludar()
+print(saludo) # debe de imprimir Hola Global
+```
+
+#### Tipos
+Estos son los tipos de python:
+- float
+- int
+- string
+- boolean
+- list (arreglos) [] tambien se pueden crear con la función `list()` dentro se debe de poner un rango o algo que se pueda iterar y crea esa lista. Por ejemplo: `list(range(0,10))` crea un arreglo con números del 0 al 9, siendo 10 elementos en total. `list("hola mundo")` crea un arreglo con cada caracter, incluido el espacio, del string.
