@@ -306,3 +306,18 @@ for mascota in enumerate(mascotas):
     print(mascota[0]) # nos devolvería el indice
     print(mascota[1]) # nos devolvería el nombre, por eso la dupla sale como (index, valor) ## (0, Renato)
 ```
+
+Para utilizar lo de enumerate de una forma más eficiente y profesional se hace de la siguiente forma:
+```python
+for indice, mascota in enumerate(mascotas):
+    print(indice, mascota) # nos devolverá cada elemento con el siguiente formato: 0 Renato
+```
+Para buscar un elemento dentro de una lista:
+```python
+print(mascotas.index("Lilo")) # nos devolvería el indice si es que lo encuentra: 2. En caso de no encontrar un elemento, devuelve un error lo que rompe el código  para corregirlo se hace así:
+
+if "firulais" in mascotas:
+    print(mascotas.index("firulais")) # para mostrar cuántas veces hace un match de lo que buscamos se debe de hacer como la siguiente línea:
+
+print(mascotas.count("firulais"))
+```
