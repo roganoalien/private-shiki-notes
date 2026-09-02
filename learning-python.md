@@ -321,3 +321,96 @@ if "firulais" in mascotas:
 
 print(mascotas.count("firulais"))
 ```
+
+##### Ingresar y eliminar elementos de listas [arreglos]
+```python
+animales = ["perro", "gato", "ardilla", "mapache", "león", "tigre", "lobo", "tortuga", "panda"]
+
+animales.insert(0, "gallo") # esto lo que hará es agregar el string "gallo" en el índece 0, los demás se mueven
+animales.append("zorro") # esto agrega el elemento hasta el final
+
+animales.remove("gato") # esto elimina EL PRIMER MATCH, si hay más dentro del arreglo se tendría que revisar si hay más de uno y eliminar esa misma cantidad el elemeto
+animales.pop() # sin un indice, pop elimina el último elemento
+animales.pop(1) # si le pasamos el indice, eliminará el elemento de ese índice
+del animales[0] # esto elimina el indice del arreglo
+animales.clear() # esto vacía por completo el arreglo
+```
+
+##### Ordenando arreglos
+La diferencia entre usar sort y sorted es que Sorted va a devolver una nueva lista mientras que sort lo hace en la misma lista
+```python
+numeros = [9, 2, 5, 8, 0, 1, 3, 25]
+numeros.sort() # esto ordena el arreglo por default
+numeros.sort(reverse=True) # ordena al revés los elementos
+numeros_copia = sorted(numeros)
+numeros_copia2 = sorted(numeros, reverse=True) # devuelve nuevo arreglo ordenado al revés
+
+usuarios = [[10, "Rodrigo"], [2, "Juan"], [5, "de la Cruz"] # indice de usuario y nombre
+usuarios.sort() # lo ordena basado en el primer elemento del arreglo dentro del arreglo, en este caso el indice
+
+def ordena(elemento):
+    return elemento[1]
+
+
+usuarios.sort(key=ordena) # lo ordena pero no entendí al 100% cómo funciona
+usuarios.sort(key=ordena, reverse=True) # hace lo mismo que el anterior pero al revés
+```
+
+#### Expresiones Lambda o funciones anónimas
+Esto es para evitar definir una función antes de implementarla como argumento y hacerlo directamente ahí como se puede hacer en Javascript:
+
+```python
+#... usuarios
+usuarios.sort(reverse=True, key=lambda elemento:elemento[1])
+```
+
+##### Listas de compresión
+
+```python
+# usando el arreglo de usuarios anterior en este ejemplo
+nombres = [usuario[1] for usuario in usuarios] # esto elimina el id y nos devuelve solo el string de los usuarios como una lista de nombres
+nombres = [usuario for usuario in usuarios if usuario[0] >= 5] # esto nos devolverá únicamente los usuarios cuyo id sea mayor o igual a 5
+# se pueden mezclar con las dos versiones anteriores
+```
+
+##### Map y Filter
+Map es usando `nombres = [usuario[1] for usuario in usuarios]` y Filter o filtrado con `nombres = [usuario for usuario in usuarios if usuario[0] >= 5]`
+
+```python
+# usando usuarios de ejemplos anteriores
+nombres = list(map(lambda usuario: usuario[1], usuarios)) # lo mismo que lo que se hizo anteriormente con MAP pero de mejor forma
+menosUsuarios = list(filter(lambda usuario: usuario[0] > 5, usuarios)) # Filter pero mejor al final se dice qué arreglo se va a tomar
+```
+
+#### Tuplas
+Es un arreglo inmutable, o sea que no se puede modificar. 
+
+```python
+numeros = (1, 2, 3) # esto es una tupla
+numeros2 = (1, 2, 3) + (4, 5, 6) # esto crea una nueva tupla combinando ambos
+```
+
+Convertir un arreglo o lista en una tupla se hace de la siguiente forma: 
+(ojo, la función de tupla recibe únicamente todo aquello que sea iterable)
+
+```python
+punto = tuple([1, 2])
+```
+
+Podemos realizar todas las funciones que se usan en arreglos en tuplas excepto aquellas que modifiquen los arreglos o listas.
+
+#### Set
+Es una colección de datos que no se puede repetir y no está ordenada. Solo hay una ocurrencia en los datos. Los set al no estar ordenados no podemos acceder a `primer[0]`
+```python
+primer = {1, 1, 2, 3, 4, 5, 5}
+print(primer) # imprime 1, 2, 3, 4, 5 -- los repetidos los "elimina"
+segundo = [1, 2, 3, 4]
+segundo = set(segundo)
+
+print(primer | segundo) # el "|" aquí se le conoce como unión y lo que hace será unir los sets removiendo los repetidos
+print(primer & segundo) # el "&" es de intersección o sea que nos devuelve los elementos que estén dentro de los dos que sean iguales
+print(primer - segundo) # nos devuelve la diferencia entre ambos por ejemplo si primer es 1, 2, 3 y segundo es 2, 3 nos mostraría 1
+print(primer ^ segundo) # nos devuelve una diferencia simétrica, nos devuelve los elementos que se encuentren en el primero y segundo pero que no se encuentran entre el uno y otro. Si el primero tiene 1, 2, 3 y el segundo tiene 2, 3, 4 nos devuelve 1, 4
+```
+
+#### Diccionarios
