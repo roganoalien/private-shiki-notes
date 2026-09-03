@@ -414,3 +414,52 @@ print(primer ^ segundo) # nos devuelve una diferencia simétrica, nos devuelve l
 ```
 
 #### Diccionarios
+Son básicamente objetos como en JavaScript y se acceden como si fuera un arreglo pero no hay indices sino por el nombre de propiedad:
+
+```python
+punto = { "x": 25, "y": 10 }
+print(punto)
+print(punto["x"])
+# agregar nuevo elemento:
+punto["z"] = 15
+print(punto) # saldra con el nuevo elemento z
+```
+
+Para buscar propiedades dentro de un diccionario y evitar "errores" se debe de ser así:
+```python
+if "lala" in punto
+    print("existe el argumento", punto["lala"])
+
+
+print(punto.get("x")) # de esta forma si queremos acceder a un elemento que no existe nos devuelve un None
+print(punto.get("lala", 97)) # en caso de que no exista el valor devolvemos un valor como por default 
+del punto["x"] # para eliminar el elemento
+del(punto["y"]) # para eliminar también
+
+# para iterar
+for valor in punto:
+    print(valor) # nos devuelve las llaves y no los valores
+    print(valor, punto[valor]) # así nos devuelve la llave y el valor
+
+
+for valor in punto.items():
+    print(valor) # nos devuelve tuplas por ejemplo: ("x", 25) \n ("y", 10)
+
+
+for llave, valor in punto.items():
+    print(llave, valor) # nos devuelve x 25 \n y 10
+```
+
+Otra forma mejor:
+```python
+usuarios = [
+    {"id": 1, "nombre": "Rodrigo"},
+    {"id": 2, "nombre": "Juan"},
+    {"id": 3, "nombre": "de la Cruz"},
+]
+
+for usuario in usuarios:
+    print(usuario["nombre"])
+```
+
+#### Operador de desempaquetamiento
