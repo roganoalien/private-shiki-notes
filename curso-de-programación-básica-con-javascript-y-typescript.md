@@ -118,24 +118,84 @@ pokemones.forEach((pokemon) => {
 ```
 
 ## Paquetes, librerías y frameworks [video 9]
+En todo lenguaje de programación, o al menos los relativamente modernos o que siguen siendo actualizados y mejorados tienen paquetes, librerías y frameworks escritos en ese lenguaje y por lo tanto tienen algún tipo de manejador de paquetes, en el caso específico de JavaScript npm que significa Node Package Manager, ya que venía incluído en NodeJS, y estos manejadores de paquetes se encargar de administrar y permitir la instalación de paquetes al igual que manejar las versiones de cada uno y una que otra actividad más. Actualmente existen varios manejadores de paquetes para javascript como bun, pnpm, yarn, etc.
+
+Y qué es un manejador de paquetes? Pues fácilmente es una tecnología que se encarga de varias actividades entre las que están la resolución y gestión de dependencias, ejecución de scripts y tareas, gestión de espacio y caché, publicación y distribución y auditoría y seguridad de los paquetes. En otras palabras qué significa? se encarga de manejar cada paquete que necesitas, mantener seguros a los usuarios que lo utilizan o al menos avisar y pedir que instalen nuevas versiones, eliminar las versiones con vulnerabilidades, aprovechar cache, ayudarte con la ejecución y actividades como builds y ejecuciones necesarias para trabajar localmente y de mantener gestionadas todas las dependencias de esos paquetes. Por ejemplo: si tuvieramos un camión que reparte pan bimbo, como dependencia tiene a la gasolina y las llantas por lo que el paquete se encarga de que esas dependencias se mantengan disponibles y no dejen de trabajar. 
+
+Y ya que saben que es un manejador de paquetes, qué es un paquete, una librería y un framework? bueno pues un paquete se podría decir que es el formato de distribución. Código empaquetado (con su metadata) listo para ser instalado, transportado y compartido mediante un manejador de paquetes. Puede contener una librería, un framework completo o simplemente una función "suelta". 
+
+Una librería es código reutilizable con funciones específicas. Tu tienes el control ya que la llamas únicamente cuando la necesitas para resolver un problema puntual.
+
+Y un Framework es una estructura base o esqueleto arquitectónico. Dicta cómo debes de organizar tu proyecto y cómo debe de fluir tu código y aplicación. El framework invierte el papel y es quien "te llama a ti", de cierta forma dicha, dictando un ciclo de vida y las reglas. Básicamente un framework bajo sus reglas y ciclo de vida muchas cosas suceden afuera del escenario que no ves y el mismo framework llama tu código en el momento que lo necesita. De estos existen muchos en JavaScript como React, Angular, Vuejs, Svelte, NextJS, Adonis, Express, Elysia, Hono, etc. 
+
+Vamos a ver un ejemplo de cada uno y cómo funciona la instalación y demás. Para eso primero deberemos de instalar NodeJS en nuestro equipo. Ya que lo tengamos instalado comprobaremos de la siguiente forma abriendo la terminal de tu equipo. [Hacer pruebas de una librería, un paquete común y un framework. 
 
 ## HTML y CSS básico [video 10]
+Como ya les mencioné, JavaScript fue hecho para funcionar dentro de un navegador únicamente o al menos así fue al principio. Pero no fue el único lenguaje pensado para funcionar en el navegador aunque sí el único lenguaje de programación disponible en el navegador en un inicio. Si pudieramos hacer referencia del cuerpo humano como el navegador, HTML serían los huesos del cuerpo y estos mantienen todo en su lugar y le da estructura al cuerpo, JavaScript son los músculos y organos que le dan funcionalidad y movimiento al cuerpo y CSS que es la piel y el cabello que le da visibilidad al cuerpo y define "la belleza". El único tema es que HTML y CSS no son lenguajes de programación y estoy hay que dejarlo muy claro... no són lenguajes de programación ya que no necesitan o requieren de una lógica para funciona, no hay funciones, condicionales, ciclos, etc. Hace unos años se inventaron los Pre-procesadores que le daban esa lógica y funcionalidad a CSS pero el CSS moderno dejó de necesitar esas reglas y funcionalidades extra y aún peor con la IA. HTML es el que casi no ha evolucionado desde la creación de HTML 5, lo siguen actualizando y le han agregado etiquetas y atributos de accesibilidad pero no ha tenido cambios tan importantes como JavaScript y CSS. Los 3 son "necesarios" para hacer funcionar un sitio web aunque el único realmente obligatorio es HTML pero los sitios modernos usan los 3 casi todos. 
+
+Proceder a hacer un landing page muy sencillo.
 
 ## Qué son los tipos TypeScript [video 11]
+Qué es TypeScript? Se define a sí mismo como JavaScript con sintaxis para tipos. Es básicamente una capa encima de JavaScript que necesita compilación de seguridad y organización. No seguridad del tipo que prevenga ataques, errores o intentos de hackeos sino de seguridad al escribir código. 
+
+Imaginen que están construyendo una pared y JavaScript podría ser como agarrar un ladrido de un cuarto oscuro donde no ves qué tipo de ladrillo agarras podrías agarrar uno naranja pequeño o uno de piedra grande, si está hueco o relleno, o si simplemente echas cemento encima de todo. TypeScript es como si iluminaras ese cuarto y organizaras cada ladrillo en una parte del cuarto y le dieras una descripción de qué tipo de ladrillo es y cómo debería de usarse. Para que se lo puedan imaginar mejor hagamos un ejemplo con código.
+
+```javascript
+function saludo(nombre, edad) {
+    if(edad < 18){
+        console.log(`Hola ${nombre}, no tienes la edad para entrar!!`);
+    }
+    console.log(`Hola ${nombre}! Tienes la edad suficiente para entrar al sitio!`);
+};
+```
+
+En ese ejemplo cuando llamemos la función y queramos meter los argumentos necesarios para la función cómo podríamos validar cuál argumento va primero o segundo? si el código lo escribió alguien más o es de una librería externa cómo sabrías si el error lo cometiste tú o el código que llamaste está mal? Cómo previenes eso? Pues con TypeScript, ahora hagamos el mismo ejercicio pero con TypeScript y veamos cómo cambia realmente:
+
+```typescript
+function saludo(nombre: string, edad: number):void {
+    if(edad < 18) {
+        console.log(`Hola ${nombre}, no tienes la edad para entrar!!`);
+    } else {
+        console.log(`Hola ${nombre}, puedes ingresar!`);
+    }
+}
+```
+
+Aparte de esto, añade nuevos tipos fuera de los de JavaScript que si recuerdan son string, boolean, number, bigInt, undefined, null y symbol. TypeScript nos agrega: any, unknown, never, void, tuplas([string, number]), enums e interfaces y types personalizados. 
 
 ## Nuestro primer sitio web [video 12]
+Antes de iniciar y hacer un sitio de alguna forma moderna, lo haremos de la forma "viejita" que sigue siendo válida hoy en día pero no muy utilizada ya que necesita varias cosas de preparación y no podríamos asegurar la disponibilidad de archivos, no tendríamos algunos beneficios de servidor, forma de tal vez desplegar el código de forma moderna y alguna que otra cosa. Pero no por eso decir que no sirve aprender esto de forma viejita no tiene su utilidad. Así que haremos un sitio muy sencillo y simple como está la imagen que nos muestra dos páginas en su versión móvil y de escritorio y veremos cómo hacer el código responsivo. Trataré de usar cosas modernas de cada lenguaje pero manteniendo las cosas de la forma más clara y sencilla posible. Usaremos javascript para ver cómo entra este lenguaje de programación de forma sencilla en un sitio para darle cierta interacción y después veremos qué es un framework, qué beneficios nos da un framework de frontend, cómo utilizarlo y demás. Así que vamos a eso.
+
+Posiblemente dividir en varias partes, dependiendo de que tan largo termine siendo.
 
 ## Usando un framework para crear un sitio web [video 13]
+Ahora veremos qué es un framework, más o menos cómo funcionan, qué son los ciclos de vida, hooks, ventajas y desventajas de ciertas tecnologías, qué es un Single Page Application o SPA. Cómo funciona un manejador de paquetes, cómo usar la terminal, instalar paquetes y preparar el código para desplegarlo en línea de forma moderna y un poco al estilo viejo que se sigue aplicando pero no tla cual como lo haremos en esta prueba. Y lo que vamos a desplegar será el mismo sitio que construimos sin el framework y le daremos un poco más de interacción.
 
-## La terminal y funciones básicas [video 14]
+Posiblemente dividir en varias partes, dependiendo de que tan largo termine siendo.
+
+## La terminal y funciones básicas [video 14] - Probablemente debería de ir antes del 13
+Cómo usar la terminar, cómo navegar a través de ella, qué ventajas tiene, manejador de paquetes para Sistemas Operativos, y un poco de git de control de versiones, lo más básico y uso de dos o tres funciones. 
+
+1. Navegar carpetas y directorios
+2. Abrir archivos y carpetas
+3. Copiar archivos, mover archivos y eliminar archivos
+4. Crear archivos y carpetas
+5. Permisos y cambios de permisos // muy leve
+6. Uso de manejador de paquetes de sistema operativo y de nodejs
+7. Git muy básico, qué es git y cómo inicializar un proyecto con git, revisar cambios y regresar cambios
+8. Hacer scripts, ejecutarlos y cortarlos
 
 ## Nuestro primer programa de terminal [video 15] # Creador de notas
+Crearemos un programa de la terminal para crear notas y acceder a ellos de forma temporal sin meternos a base de datos. Cómo funcionan los programas de terminal o cómo se ejecutan, argumentos, etc. 
 
 ## Nuestro primer servidor y qué es un API [video 16]
+Sin usar un framework, crearemos un API muy sencillo y cómo funcionan en el navegador y cómo usar herramientas externas para interactuar con API's.
 
 ## Frameworks para el backend, qué es un backend [video 17]
+Uso de Hono para crear el mismo API 
 
 ## Nuestra primer API [video 18]
+Backend del Pokedex en forma de API
 
 ## Pokedex [video 19]
 
