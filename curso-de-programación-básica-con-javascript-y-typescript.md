@@ -201,6 +201,8 @@ Backend del Pokedex en forma de API
 
 ## Nuestra primer aplicación de escritorio con Electron [video 20] # Creador de notas
 
+## Qué es una base de datos y por qué deberíamos de utilizar una en lugar de un archivo
+
 ## Qué es un ORM [video 21]
 
 ## Base de datos no relacional [video 22]
