@@ -198,15 +198,16 @@ Uso de Hono para crear el mismo API
 Backend del Pokedex en forma de API
 
 ## Pokedex [video 19]
+Frontend del API de pokedex
 
 ## Nuestra primer aplicación de escritorio con Electron [video 20] # Creador de notas
 
-## Qué es una base de datos y por qué deberíamos de utilizar una en lugar de un archivo
+## Qué es una base de datos y por qué deberíamos de utilizar una en lugar de un archivo [video 21]
 
-## Qué es un ORM [video 21]
+## Qué es un ORM [video 22]
 
-## Base de datos no relacional [video 22]
+## Base de datos no relacional [video 23]
 
-## Base de datos relacional [video 23]
+## Base de datos relacional [video 24]
 
-## Qué más podemos hacer con JavaScript y TypeScript? [video 24]
+## Qué más podemos hacer con JavaScript y TypeScript? [video 25]
